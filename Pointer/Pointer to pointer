@@ -1,0 +1,27 @@
+//Pointer to pointer (Double Pointer)
+
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+    int a = 10;
+    int *p = &a;
+    int **q = &p;
+
+
+    printf("\na = %d and &a = %d &a = %p (Hexadecimal)\n\n",a,&a,&a); //&a = %p (Hexadecimal)
+    printf("p = %d and &p = %d *p = %p (Hexadecimal)\n\n",p,&p,*p);
+    printf("q = %d and &q = %d **q = %p (Hexadecimal)\n\n",q,&q,**q);
+
+    //a veriable er mann change korte pari *p and **q duitar maddome.
+    **q=20;
+    printf("\na = %d and &a = %d &a = %p (Hexadecimal)\n\n",a,&a,&a);
+
+    //q er memory address change kore new pointer
+    int ***x = &q;
+    printf("x = %p and ***x = %d (Hexadecimal)\n\n",x,***x);
+
+
+    return 0;
+}
