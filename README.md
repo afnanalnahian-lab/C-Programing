@@ -1,2 +1,2 @@
 # C-Programing
-This Respository is maded by me during my bsc engineering 1st semister. Here you can find my effort on c . and also introduce where i was started. 
+"This repository was made by me during the first semester of my B.Sc. in Engineering. Here, you can find my work in C and see where my coding journey started."
