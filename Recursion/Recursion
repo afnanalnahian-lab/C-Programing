@@ -1,0 +1,18 @@
+//Recursion
+
+#include<stdio.h>
+#include<conio.h>
+int sum(int n){
+        if(n == 0){
+            return 0;
+        }
+        return n + sum(n - 1);
+    }
+int main()
+{
+    int n = 5;
+    int result = sum(n);
+    printf("Sum is : %d\n", result);
+
+    return 0;
+}
