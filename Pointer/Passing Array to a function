@@ -1,0 +1,32 @@
+//Passing Array to a function in C
+
+#include<stdio.h>
+
+//Function Decleartion
+void printArrayint(int arr[], int size); //arr[] or *arr same. they are both pointer.
+void updateArrayint(int arr[], int size, int value);
+
+int main()
+{
+    int myArray[]={10,20,30,40,50};
+
+    //Function Call
+    printArrayint(myArray, 5);
+    updateArrayint(myArray, 5, 2); //2 (increment)
+    printArrayint(myArray, 5);
+
+    return 0;
+
+}
+void printArrayint(int arr[], int size){
+     for(int i=0;i<size;i++){
+       printf("%d\n",arr[i]);
+     }
+}
+
+void updateArrayint(int arr[], int size, int value){
+     printf("\n\n Updating the Array\n\n");
+     for(int i=0;i<size;i++){
+       arr[i]+=value;
+     }
+}
