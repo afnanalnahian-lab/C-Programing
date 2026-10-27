@@ -1,0 +1,33 @@
+//Pointer and Array in C
+
+#include<stdio.h>
+int main()
+{
+    int a[5]={10,20,30,40,50};
+    int *p;
+
+    p=&a[0];
+
+    printf("\n\n");
+    printf("&a[0]=%d\n", a[0]);
+    printf("p=%d\n",p);
+    printf("*p=%d\n",*p);
+
+    p++;
+
+    printf("\n\n");
+    printf("p=%d\n",p);
+    printf("*p=%d\n",*p);
+
+    printf("\n\n");
+    printf("a+1=%d\n",a+1); //a++  a=a+1 Not Correct.
+    printf("*(a+1)=%d\n",*(a+1));
+
+    printf("\n\n");
+    //Print all element
+    for(int i=0;i<5;i++){
+        printf("*p=%d",*p);
+    }
+    return 0;
+
+}
