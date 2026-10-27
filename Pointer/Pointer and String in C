@@ -1,0 +1,51 @@
+//Pointer and String in C
+
+#include<stdio.h>
+int main()
+{
+    char str[]="Hello";
+
+    printf("\n\n");
+    printf("String - %s\n", str);
+    printf("Size - %d\n",sizeof(str));
+    printf("Pointer - %c\n",*(str)); //Only for first box
+    printf("Pointer - %c\n",*(str+1)); //Only for Second box
+
+    str[2]='W';
+    printf("Pointer - %c\n",*(str+2));
+
+    //"Hellow" change hoye jabe.
+    printf("String - %s\n", str);
+
+    char *p;
+
+    p=&str;
+
+    printf("\n\n");
+    printf("String in P - %s\n", p);
+    printf("\n\n");
+
+    str[2]='l';
+
+    printf("\n\n");
+    printf("-----Using While Loop-----\n");
+    while(*p!='\0'){
+         printf("        pointer %c\n", *p);
+         p++;
+    }
+
+    //Pointer String
+    //Pointer String Change kora jay na,
+    char *pstr="Hello World"; //Pointer er size deya lage na.
+    printf("pointer String - %s\n", pstr);
+    printf("pointer String Size - %s\n", sizeof(pstr)); //Pointer String paowa jay na.
+
+    //str++ not possible
+    //pstr++; possible
+
+    pstr="World";
+    printf("New pointer String - %s\n", pstr);
+
+    return 0;
+
+}
