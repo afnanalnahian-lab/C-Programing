@@ -1,0 +1,40 @@
+//Fibonacci Number using Recursion Function.
+
+//F(n)=F(n-1)+(n-2); F(0)=0 and F(1)=1
+
+#include<stdio.h>
+#include<conio.h>
+int fib(int n){
+        //base Case
+        if(n == 0 || n == 1){
+            return n;
+        }
+        //Recursive Case
+        return fib(n-1) + fib(n-2);
+    }
+
+//New Function for Fibonacci Series
+void printfib(int n){
+     printf("Fibonacci Number up to %d\n");
+     for(int i=0; i<n; i++){
+        printf("%d ", fib(i));
+     }
+}
+int main()
+{
+    int n ;
+    printf("Enter Positive Number: ");
+    scanf("%d",&n);
+
+    if(n<0){
+        printf("Please Enter Non-Nagetive Number\n");
+        return 0;
+    }
+
+    int result = fib(n);
+    printf("\nFibonacci Number is : %d\n", result);
+
+    printfib(n);
+
+    return 0;
+}
