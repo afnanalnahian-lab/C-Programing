@@ -15,7 +15,7 @@ int fib(int n){
 
 //New Function for Fibonacci Series
 void printfib(int n){
-     printf("Fibonacci Number up to %d\n");
+     printf("Fibonacci Number up to %d\n", n);
      for(int i=0; i<n; i++){
         printf("%d ", fib(i));
      }
