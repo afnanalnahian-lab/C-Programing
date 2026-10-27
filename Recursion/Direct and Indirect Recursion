@@ -1,0 +1,36 @@
+//Direct and Indirect Recursion
+
+#include<stdio.h>
+#include<conio.h>
+
+//Declaration of isOdd and isEven
+char* isOdd(int n);
+char* isEven(int n);
+
+//Function to cheak if a number is Even
+char* isEven(int n){
+      if(n == 0){
+        return "Even Number";
+      } else {
+        return isOdd(n-1);
+      }
+}
+//Function to cheak if a number is Odd
+char* isOdd(int n){
+      if(n == 0){
+        return "Odd Number";
+      } else {
+        return isEven(n-1);
+      }
+}
+
+int main()
+{
+    int num = 5;
+
+    char* result = isEven(num);
+    //Cheak if the number is even or odd and print the result.
+    printf("%d is %s\n", num, result);
+
+    return 0;
+}
