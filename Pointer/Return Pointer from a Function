@@ -1,0 +1,25 @@
+//Return Pointer from a Function.
+
+#include<stdio.h>
+
+//function Decleration
+int *returnpointer(int *a);
+
+int main()
+{
+    int x = 5;
+    int *p;
+
+    //Function Call
+    p = returnpointer(&x);
+    printf("*p = %d\n",*p);
+    printf("X = %d\n",x);
+
+    return 0;
+}
+
+//Function Defination
+int *returnpointer(int *a){
+     *a = *a+2;
+     return a;
+}
