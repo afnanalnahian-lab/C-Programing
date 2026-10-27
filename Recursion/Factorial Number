@@ -1,0 +1,30 @@
+//Factorial Number using Recursion Function.
+
+#include<stdio.h>
+#include<conio.h>
+int fac(int n){ //unsigned long long
+        //base Case
+        if(n == 0){
+            return 1;
+        }
+        //Recursive Case
+        return n * fac(n-1);
+    }
+
+
+int main()
+{
+    int number ;
+    printf("Enter Positive Number: ");
+    scanf("%d",&number);
+
+    if(number<0){
+        printf("Please Enter Non-Nagetive Number\n");
+        return 0;
+    }
+
+    int result = fac(number); //unsigned long long
+    printf("\nFactorial Number of %d! : %d\n", number, result);
+
+    return 0;
+}
