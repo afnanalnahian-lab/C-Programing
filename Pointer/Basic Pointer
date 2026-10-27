@@ -1,0 +1,29 @@
+//Pointer
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+
+    int num=10;
+    int *ptr;
+
+    ptr=&num;
+
+    printf("\n\n");
+    printf("Address of num %d\n", &num);
+    printf("Value of ptr is %d\n", ptr);
+    printf("Value of *ptr is %d\n", *ptr);
+    printf("Value of num is %d\n", num);
+
+    *ptr=20;
+
+    printf("\n\n");
+    printf("Address of num %d\n", &num);
+    printf("Value of ptr is %d\n", ptr);
+    printf("Value of *ptr is %d\n", *ptr);
+    printf("Value of num is %d\n", num);
+
+    return 0;
+
+}
