@@ -1,0 +1,24 @@
+//Void Pointers
+
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+    int x = 10;
+    double y = 3.14;
+    char c = 'a';
+
+    void *vPtr; //Void Pointer = Ekta pointer use kore differnt type er variable excess kora jay.
+
+    vPtr = &x;
+    printf("X : %d\n", *(int*)vPtr); //(*int)= Type Casting.
+
+    vPtr = &y;
+    printf("Y : %lf\n", *(double*)vPtr);
+
+    vPtr = &c;
+    printf("C : %c\n", *(char*)vPtr);
+
+    return 0;
+}
