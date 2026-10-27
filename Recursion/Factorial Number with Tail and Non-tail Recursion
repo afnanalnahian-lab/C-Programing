@@ -1,0 +1,23 @@
+//Factorial Number with Tail and Non-tail Recursion
+
+#include<stdio.h>
+#include<conio.h>
+int fac(int n, int a){ //unsigned long long
+        //base Case
+        if(n == 0){
+            return a;
+        }
+        //Recursive Case
+        return fac(n-1, n*a);
+    }
+
+
+int main()
+{
+
+
+    int result = fac(5, 1); //unsigned long long
+    printf("\nFactorial Number : %d\n", result);
+
+    return 0;
+}
