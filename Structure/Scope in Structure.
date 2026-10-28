@@ -1,0 +1,30 @@
+//Scope in Structure.
+
+#include<stdio.h>
+
+struct Student{ //Global Structure - It can be Used every Function
+     int id;
+     char *name;
+    };
+
+struct Student student;//Global variable - It can be Used every Function
+
+void displayStudent(){
+
+    printf("ID : %d\n",student.id);
+    printf("Name : %s\n",student.name);
+}
+
+int main() {
+
+
+    student.id = 101;
+    student.name ="Mahi";
+    displayStudent();
+
+    student.id = 101;
+    student.name ="Nahian";
+    displayStudent();
+
+    return 0;
+}
