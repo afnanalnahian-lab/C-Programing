@@ -1,0 +1,21 @@
+//Pointer in Structure.
+
+#include<stdio.h>
+
+struct Point{ //Global Pointer - It can be Used every Function
+     int x;
+     int y;
+    };
+
+
+int main() {
+
+    struct Point point = {1, 2};
+    struct Point *ptr = &point;
+
+    printf("X = %d, Y = %d\n", ptr->x, ptr->y);
+    printf("X = %d, Y = %d\n", (*ptr).x, (*ptr).y);
+
+
+    return 0;
+}
