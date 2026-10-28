@@ -1,0 +1,36 @@
+// Structure-2 in C
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+int main()
+{
+    //define Structure for a product
+    struct Product{
+           int id;
+           char name[50];
+           char category[20];
+           float price;
+           int quantity;
+    };
+    //Declare and Initialize structure variable
+    struct Product product_1 = {101, "Laptop XYZ", "Electronics", 1200.00, 15};
+    struct Product product_2 = {102, "Coffe", "Groceru", 15.99, 100};
+
+    //Access and Display
+    printf("id : %d\n", product_1.id);
+    printf("Name : %s\n", product_1.name);
+    printf("Category : %s\n", product_1.category);
+    printf("Price : %.2f\n", product_1.price);
+    printf("Quantity : %d\n", product_1.quantity);
+
+
+    printf("\n\nid : %d\n", product_2.id);
+    printf("Name : %s\n", product_2.name);
+    printf("Category : %s\n", product_2.category);
+    printf("Price : %.2f\n", product_2.price);
+    printf("Quantity : %d\n", product_2.quantity);
+
+    return 0;
+}
