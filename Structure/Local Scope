@@ -1,0 +1,21 @@
+// Local Scope of Variables
+
+#include<stdio.h>
+
+void sum(){
+    int a = 10;
+    //printf("b = %d",b); Error, b is not declared in this sum function.
+    printf("a = %d",a); //Output 10 // Print only this function not main function
+}
+
+int main() {
+
+    int b = 20; //Local Variable
+    int a = 30; //Local variable
+
+    printf("b = %d\n",b);
+    //printf("a (sum) = %d",a); Output Error
+    printf("a (main)= %d",a); // Output 30
+
+    return 0;
+}
