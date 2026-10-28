@@ -1,0 +1,63 @@
+// Array of Structure with User input in C - New Type
+
+#include<stdio.h>
+#include<string.h>
+
+#define Total_Products 2
+
+void clearBuffer(){
+    while(getchar() != '\n');
+}
+
+// FIX 1: Changed sizeof(str) to size
+void getString(char *str, int size){
+    fgets(str, size, stdin);
+    if(str[strlen(str)-1] == '\n'){
+        str[strlen(str)-1] = '\0';
+    }
+}
+
+int main() {
+    struct Product {
+        int id;
+        char name[50];
+        char category[20];
+        float price;
+        int quantity;
+    };
+
+    struct Product products[Total_Products];
+
+    for(int i=0; i<Total_Products; i++){
+        printf("--- Enter Details for Product %d ---\n", i + 1);
+
+        printf("Product ID : ");
+        scanf("%d", &products[i].id);
+        clearBuffer(); // Clears buffer after integer input
+
+        printf("Product Name : ");
+        getString(products[i].name, sizeof(products[i].name));
+
+        printf("Product Category : ");
+        getString(products[i].category, sizeof(products[i].category));
+
+        printf("Product Price : ");
+        scanf("%f", &products[i].price);
+
+        printf("Product Quantity : ");
+        scanf("%d", &products[i].quantity);
+        clearBuffer(); // FIX 2: Clears buffer so the next loop's ID input works perfectly
+    }
+
+    printf("\n================ OUTPUT ================\n");
+    for(int i=0; i<Total_Products; i++){
+        printf("ID       : %d\n", products[i].id);
+        printf("Name     : %s\n", products[i].name);
+        printf("Category : %s\n", products[i].category);
+        printf("Price    : %.2f\n", products[i].price);
+        printf("Quantity : %d\n", products[i].quantity);
+        printf("-----------------------------------\n");
+    }
+
+    return 0;
+}
