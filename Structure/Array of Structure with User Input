@@ -1,0 +1,53 @@
+// Array of Structure with User Input in C
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+#define Total_Products 2 //Onek gulu product nite parbe. 5 dile 5 ta box hobe, array er modde 2 tar information dile baki box gulu khali thakbe.
+
+int main()
+{
+    //define Structure for a product
+    struct Product{
+           int id;
+           char name[50];
+           char category[20];
+           float price;
+           int quantity;
+    };
+    struct Product products[Total_Products];
+
+    for(int i=0; i<Total_Products; i++){
+        printf("Product ID : ");
+        scanf("%d",&products[i].id);
+
+        //2ta fgets er maje space thake na.tai while loop
+        while(getchar() != '\n'); //New line create na howya porjonto loop cholbe.
+
+        printf("Product Name : ");
+        fgets(products[i].name, sizeof(products[i].name), stdin); //string er khetre fgets neya hoy, error ashe na.
+
+        printf("Product Category : ");
+        fgets(products[i].category, sizeof(products[i].category), stdin);
+
+        printf("Product Price : ");
+        scanf("%f",&products[i].price);
+        while(getchar() != '\n'); //Price nebar por buffer clear.
+
+        printf("Product Quantity : ");
+        scanf("%d",&products[i].quantity);
+        while(getchar() != '\n');
+    }
+
+    for(int i=0; i<Total_Products; i++){
+        printf("ID : %d\n", products[i].id);
+        printf("Name : %s\n", products[i].name);
+        printf("Category : %s\n", products[i].category);
+        printf("Price : %.2f\n", products[i].price);
+        printf("Quantity : %d\n", products[i].quantity);
+        
+    }
+
+    return 0;
+}
