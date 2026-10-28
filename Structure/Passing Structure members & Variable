@@ -1,0 +1,19 @@
+//Passing Structure members & Variable
+
+#include<stdio.h>
+
+struct Point{ //Global Pointer - It can be Used every Function
+     int x;
+     int y;
+    };
+void displayPoint(int x, int y){
+     printf("X = %d, Y = %d\n", x,y);
+}
+
+int main() {
+
+    struct Point point = {10, 20};
+    displayPoint(point.x, point.y); //Call by Value pass.
+
+    return 0;
+}
