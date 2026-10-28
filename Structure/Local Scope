@@ -1,6 +1,8 @@
-// Local Scope of Variables
+//Scope of Variables
 
 #include<stdio.h>
+
+int globalVar = 15; //Global Variable - can be used it in any function.
 
 void sum(){
     int a = 10;
@@ -15,7 +17,18 @@ int main() {
 
     printf("b = %d\n",b);
     //printf("a (sum) = %d",a); Output Error
-    printf("a (main)= %d",a); // Output 30
+    printf("a (main)= %d\n",a); // Output 30
+    printf("a (main) + GlobalVar = %d\n",a + globalVar); //Output 45
+
+    globalVar = globalVar + 15;
+    printf("a (main) + GlobalVar = %d\n",a + globalVar);
+
+    //Block Scope
+    if(1){
+        int c = a + b; //Block Scope
+        printf("c = %d\n",c); //Output = 50
+    }
+    //printf("c = %d\n",c); Error, c has work ability in if statement.
 
     return 0;
 }
