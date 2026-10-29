@@ -1,0 +1,33 @@
+//File Handaleing in C
+
+#include <stdio.h>
+
+int main() {
+    FILE *file_ptr;
+    // Fix 1: Added missing semicolon at the end of the string
+    char str[] = "\nWelcome to Bangladesh. ";
+    int totalvid = 168;
+
+    file_ptr = fopen("file.txt", "w");
+    if (file_ptr == NULL) {
+        printf("Failed to create the file\n");
+        return -1;
+    }
+
+    // Write a character using fputc
+    fputc('A', file_ptr);
+
+    //write a string using fputc
+    int i = 0;
+    while (str[i] != '\0') {
+        fputc(str[i], file_ptr);
+        i++; // Fix 3: Added i++ to move to the next character and avoid an infinite loop
+    }
+    fputs(str, file_ptr);//while loop na chala le evabe korte paro.
+
+    //write a formating string using fprintf
+    fprintf(file_ptr, "\tTotal Number Number of Videos: %d",totalvid);
+
+    fclose(file_ptr);
+    return 0;
+}
