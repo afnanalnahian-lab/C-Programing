@@ -1,0 +1,26 @@
+//Passing Structure Array to function
+
+#include <stdio.h>
+
+struct Book {
+    int id;
+    char name[20];
+    float price;
+};
+void printBooklist(struct Book books[], int size){
+    printf("Print Book List :\n");
+    for(int i=0; i<size; i++){
+        printf("%d \t %s \t %.2f\n",books[i].id, books[i].name, books[i].price);
+    }
+}
+
+int main() {
+    struct Book books[] = {
+    { 101, "C Book", 50.00 },
+    { 102, "D Book", 70.00 },
+    { 103, "E Book", 60.00},
+    };
+    printBooklist(books, 3);
+
+    return 0;
+}
