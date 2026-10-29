@@ -1,0 +1,28 @@
+//Passing Structure Pointer members & Variable
+
+#include <stdio.h>
+
+struct Point {
+    int x;
+    int y;
+};
+
+void updatePoint(struct Point *p, int a, int b) {
+    p->x = a;
+    p->y = b;
+}
+
+void displayPoint(struct Point p) {
+    printf("X = %d, Y = %d\n", p.x, p.y);
+}
+
+int main() {
+    struct Point point = {10, 20};
+    displayPoint(point); // Displays: X = 10, Y = 20
+
+    updatePoint(&point, 30, 40); // Uncommented: Passes address to update values
+
+    displayPoint(point); // Displays: X = 30, Y = 40
+    return 0;
+}
+
