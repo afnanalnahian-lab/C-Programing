@@ -1,0 +1,21 @@
+//Structure Packing
+
+#include <stdio.h>
+
+#pragma pack(1) //Mamory save hobe, but CPU slow hobe.
+
+
+struct MyStruct{
+    char a; //1
+    char c;//1
+    int b;//4
+};
+
+int main() {
+
+    struct MyStruct mystruct;
+
+    printf("Size of myStruct = %d\n",sizeof(mystruct));
+
+    return 0;
+}
