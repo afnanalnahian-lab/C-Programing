@@ -1,0 +1,18 @@
+//Structure Padding
+
+#include <stdio.h>
+
+struct MyStruct{
+    int b;//4
+    char a; //1
+    char c;//1
+};
+
+int main() {
+
+    struct MyStruct mystruct;
+
+    printf("Size of myStruct = %d\n",sizeof(mystruct));
+
+    return 0;
+}
