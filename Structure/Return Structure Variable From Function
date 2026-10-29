@@ -1,0 +1,40 @@
+//Return Structure Variable From Function
+
+#include <stdio.h>
+
+struct Book {
+    int id;
+    char name[20];
+    float price;
+};
+struct Book creatBook(){
+
+       struct Book newbook;
+
+       printf("Boook ID: ");
+       scanf("%d", &newbook.id);
+
+       while (getchar() != '\n');// 1. Clear the leftover newline character from the buffer
+
+       printf("Boook Name: ");
+       fgets(newbook.name, sizeof(newbook.name), stdin);
+
+       newbook.name[strcspn(newbook.name, "\n")] = '\0';
+
+       printf("Book Price: ");
+       scanf("%f", &newbook.price);
+
+       return newbook;
+};
+void displayBook(struct Book book){
+    printf("New Book Information\n");
+    printf("ID: %d, \t Name: %s, \t Price: %.2f\n",book.id, book.name, book.price);
+}
+
+
+int main() {
+    struct Book book;
+    book = creatBook();
+
+    return 0;
+}
