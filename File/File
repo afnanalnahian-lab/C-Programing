@@ -1,0 +1,21 @@
+//File
+
+#include<stdio.h>
+
+int main()
+{
+    FILE *file_ptr;
+
+    file_ptr = fopen("file.txt","r");
+
+
+    if(file_ptr == NULL){
+       printf("Failed to create the file\n");
+       return 1;
+    }
+    if(fclose(file_ptr) == EOF){
+        printf("Error Occurred while closing file\n");
+    }
+    printf("File created Succesfully\n");
+    return 0;
+}
