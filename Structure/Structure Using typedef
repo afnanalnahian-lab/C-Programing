@@ -1,0 +1,24 @@
+//Structure Using typedef.
+
+#include <stdio.h>
+
+struct BookInfo{ //typrdef struct BookInfo{} Book. Likhle o hobe
+    int id;
+    char *name;
+    float price;
+};
+
+int main() {
+
+    typedef struct BookInfo Book;
+
+    Book book;
+
+    book.id = 101;
+    book.name = "C Programing";
+    book.price = 29.99;
+
+    printf("ID = %d, Name = %s, Price = %.2f\n",book.id,book.name,book.price);
+
+    return 0;
+}
