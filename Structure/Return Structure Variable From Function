@@ -35,6 +35,7 @@ void displayBook(struct Book book){
 int main() {
     struct Book book;
     book = creatBook();
+    displayBook(book);
 
     return 0;
 }
