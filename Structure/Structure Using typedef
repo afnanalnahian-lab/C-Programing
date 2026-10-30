@@ -12,7 +12,7 @@ int main() {
 
     typedef struct BookInfo Book;
 
-    Book book;
+    Book book; //book is veriable , Book Sructure rename by typedef.
 
     book.id = 101;
     book.name = "C Programing";
