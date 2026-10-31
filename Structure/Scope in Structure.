@@ -1,5 +1,3 @@
-//Scope in Structure.
-
 #include<stdio.h>
 
 struct Student{ //Global Structure - It can be Used every Function
@@ -7,23 +5,23 @@ struct Student{ //Global Structure - It can be Used every Function
      char *name;
     };
 
-struct Student student;//Global variable - It can be Used every Function
+struct Student s;//Global variable - It can be Used every Function
 
 void displayStudent(){
 
-    printf("ID : %d\n",student.id);
-    printf("Name : %s\n",student.name);
+    printf("ID : %d\n",s.id);
+    printf("Name : %s\n",s.name);
 }
 
 int main() {
 
 
-    student.id = 101;
-    student.name ="Mahi";
+    s.id = 101;
+    s.name ="Mahi";
     displayStudent();
 
-    student.id = 101;
-    student.name ="Nahian";
+    s.id = 101;
+    s.name ="Nahian";
     displayStudent();
 
     return 0;
